@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* Colors */
+$white: #ffffff;
+$white5: #e5e5e5;
+$black50: #2e2e2e;
+$black100: #000000;
+$grey10: #d6d4d4e0;
+$grey20: #808080;
+$red100: #b00000;
+/*  */
+
+/* Font */
+$primary-font: "Poppins", sans-serif;
+$secondary-font: "Inter", sans-serif;
+.h1 {
+  font: {
+    family: $primary-font;
+    style: "normal";
+    weight: bold;
+    size: 64px;
+  }
+  line-height: 77px;
+  color: $black50;
+}
+.second-subtitle {
+  color: $grey20;
+  letter-spacing: 0.05em;
+  font-size: 16px;
+  line-height: 28px;
+  font: {
+    weight: 400;
+    style: normal;
+    size: 16px;
+    family: $secondary-font;
+  }
+}
+/*  */
+
+.main-btn {
+  font: {
+    size: 14px;
+    family: $primary-font;
+  }
+  color: $black100;
+  line-height: 24px;
+  width: 160px;
+  height: 48px;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 8px;
+  background: $white;
+  &:hover {
+    color: $white;
+    background: #b00000;
+    border: none;
+    border-radius: 8px;
+  }
+  &:active {
+    box-shadow: 0px 0px 64px rgba(176, 0, 0, 0.3);
+  }
+}
+
+body {
+  font-family: $primary-font;
+  font-size: 18px;
+  color: $black100;
+}
+
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.inner-wrapper {
+  max-width: 85vw;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 90.81px;
+  height: 60px;
+  margin-right: 65px;
+}
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.menu-item {
+  text-decoration: none;
+  color: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 22.5px;
+  padding-bottom: 4px;
+  margin-right: 34px;
+  &:hover {
+    opacity: 0.8;
+    border-bottom: 1px solid $red100;
+  }
+}
+.main-screen {
+  display: flex;
+  .block {
+    flex: 1;
+  }
+  .content-block {
+    .h1 {
+      margin-bottom: 34px;
+    }
+    p {
+      margin-bottom: 60px;
+    }
+    .h1,
+    .second-subtitle {
+      padding-right: 25%;
+    }
+    .slider-menu {
+      margin-bottom: 26px;
+      .item {
+        @extend .menu-item;
+        color: $grey10;
+        border-bottom: 1px $white5 solid;
+        &:hover {
+          color: $red100;
+        }
+      }
+    }
+    .main-btn:first-of-type {
+      margin-right: 25px;
+    }
+  }
+
+  .image-block {
+    display: flex;
+    justify-content: center;
+    .promo-photo {
+      width: 501px;
+      height: 504px;
+    }
+  }
+}
