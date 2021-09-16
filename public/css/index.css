@@ -345,7 +345,7 @@ body {
   right: -100px;
   font-size: 10px;
   font-weight: 500;
-  font-line-height: 9px;
+  line-height: 9px;
 }
 .pricing .slider-menu {
   display: flex;
