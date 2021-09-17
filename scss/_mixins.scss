@@ -50,3 +50,45 @@
     }
   }
 }
+
+@mixin checkbox($margin_x, $first-color, $second-color) {
+  input[type="checkbox"] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+    &:checked + label {
+      background: $second-color;
+    }
+    &:checked + label:after {
+      left: calc(100% - 9px);
+      transform: translateX(-100%);
+    }
+  }
+
+  label {
+    margin-left: $margin_x;
+    margin-right: $margin_x;
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 93px;
+    height: 50px;
+    background: $first-color;
+    display: block;
+    border-radius: 100px;
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 9px;
+      width: 30px;
+      height: 30px;
+      background: #fff;
+      border-radius: 30px;
+      transition: 0.3s;
+    }
+    &:active:after {
+      width: 30px;
+    }
+  }
+}

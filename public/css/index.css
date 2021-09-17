@@ -601,10 +601,8 @@ label:active:after {
   padding-left: 10%;
   padding-right: 10%;
 }
-.features-list .features-item .features-icon {
-  margin-bottom: 12px;
-}
 .features-list .features-item .h4 {
+  margin-top: 12px;
   margin-bottom: 4px;
 }
 
