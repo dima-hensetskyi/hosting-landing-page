@@ -1,0 +1,52 @@
+@mixin triangle(
+  $pseudo-element,
+  $size,
+  $color,
+  $top-or-bottom,
+  $top-or-bottom-value,
+  $left-or-right,
+  $left-or-right-value,
+  $direction
+) {
+  &:#{$pseudo-element} {
+    content: "";
+    border: $size solid transparent;
+    border-#{$direction}: $size solid $color;
+    border-bottom: $size solid $color;
+    position: absolute;
+    #{$top-or-bottom}: $top-or-bottom-value;
+    #{$left-or-right}: $left-or-right-value;
+  }
+}
+
+@mixin font($size, $weight, $line-height, $family: false) {
+  font: {
+    size: $size;
+    weight: $weight;
+  }
+  @if ($family) {
+    font-family: $family;
+  }
+  line-height: $line-height;
+}
+
+@mixin feature-icon($color, $size: 100px) {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:before {
+    content: "";
+    height: $size;
+    width: $size;
+    border-radius: 50%;
+    opacity: 0.15;
+    background: $color;
+    position: absolute;
+  }
+  svg {
+    path {
+      stroke: $color;
+    }
+  }
+}

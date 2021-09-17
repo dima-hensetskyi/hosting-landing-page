@@ -1,0 +1,123 @@
+.pricing {
+  text-align: center;
+  .h1 {
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 60px;
+    color: #000000;
+    margin-bottom: 38px;
+    margin: 0 20% 38px 20%;
+  }
+  .subtitle {
+    margin-bottom: 57px;
+  }
+  .package {
+    margin-bottom: 120px;
+    display: flex;
+    justify-content: center;
+    .subtitle {
+      margin-bottom: 0;
+      display: flex;
+      align-items: center;
+      position: relative;
+      &:last-of-type:after {
+        content: "20%  discount";
+        position: absolute;
+        width: 87px;
+        height: 24px;
+        border-radius: 8px;
+        box-sizing: border-box;
+        background: $yellow;
+        padding: 7px 8px;
+        right: -100px;
+        font: {
+          size: 10px;
+          weight: 500;
+        }
+        line-height: 9px;
+      }
+    }
+  }
+  .slider-menu {
+    display: flex;
+    margin: 0 10% 85px 10%;
+    .item {
+      flex: 1;
+      @extend .menu-item;
+      font-size: 30px;
+      font-weight: 600;
+      line-height: 40px;
+      margin-right: 0;
+      border-bottom: 4px solid $grey5;
+      &:hover {
+        border-bottom: 4px solid $red100;
+      }
+    }
+    .item:hover::before {
+      width: 0;
+    }
+    .item-active {
+      border-bottom: 4px solid $red100;
+    }
+  }
+  .price-list {
+    display: flex;
+    padding-left: 4%;
+    padding-right: 4%;
+    justify-content: space-between;
+    .price-card {
+      margin-right: 9%;
+      background: #ffffff;
+      border: 1.5px solid #c4c4c4;
+      box-sizing: border-box;
+      box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 15px;
+      padding: 34px;
+      text-align: left;
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+    .card-title {
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 25px;
+      margin-bottom: 11px;
+    }
+    .secondary {
+      margin-bottom: 28px;
+    }
+    .small-subtitle {
+      margin: 11px 0 35px 0;
+    }
+    .main-btn {
+      margin-bottom: 35px;
+      border: 2px solid $black100;
+      font-weight: 600;
+      &:hover {
+        border: $red100 2px solid;
+      }
+    }
+    .features-list {
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+      li {
+        @extend .h6;
+        color: $grey20;
+        font-feature-settings: "pnum" on, "lnum" on;
+        font-family: $secondary-font;
+        margin-bottom: 15px;
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+        &::before {
+          content: url("../img/checkmark.svg");
+          vertical-align: middle;
+          margin-right: 24px;
+          color: $black100;
+        }
+      }
+    }
+  }
+}
