@@ -9,7 +9,7 @@
 .app-icon {
   vertical-align: middle;
 }
-.logo {
+.header__logo {
   width: 90.81px;
   height: 60px;
   margin-right: 65px;
@@ -52,7 +52,7 @@
 }
 .main-screen {
   display: flex;
-  .content-block {
+  .main-screen__content-block {
     width: 58%;
     position: relative;
     @include triangle(before, 20px, $red100, bottom, 161px, right, -15px, left);
@@ -66,7 +66,7 @@
     .second-subtitle {
       padding-right: 25%;
     }
-    .slider-menu {
+    .main-screen__slider-menu {
       margin-bottom: 26px;
       span {
         padding-bottom: 2px;
@@ -87,12 +87,12 @@
     }
   }
 
-  .image-block {
+  .main-screen__image-block {
     width: 42%;
     display: flex;
     justify-content: center;
     position: relative;
-    .promo-photo {
+    .main-screen__promo-photo {
       width: 100%;
       z-index: -1;
       height: auto;

@@ -1,6 +1,7 @@
 .pricing {
   text-align: center;
-  .h1 {
+  .pricing__title {
+    @extend .h1;
     font-size: 50px;
     font-weight: 600;
     line-height: 60px;
@@ -8,14 +9,18 @@
     margin-bottom: 38px;
     margin: 0 20% 38px 20%;
   }
-  .subtitle {
+  .pricing__subtitle {
+    @extend .subtitle;
     margin-bottom: 57px;
   }
-  .package {
+  .pricing__package {
+    .package__subtitle {
+      @extend .subtitle;
+    }
     margin-bottom: 120px;
     display: flex;
     justify-content: center;
-    .subtitle {
+    .package__subtitle {
       margin-bottom: 0;
       display: flex;
       align-items: center;
@@ -38,10 +43,10 @@
       }
     }
   }
-  .slider-menu {
+  .package__slider-menu {
     display: flex;
     margin: 0 10% 85px 10%;
-    .item {
+    .slider-menu__item {
       flex: 1;
       @extend .menu-item;
       font-size: 30px;
@@ -53,19 +58,19 @@
         border-bottom: 4px solid $red100;
       }
     }
-    .item:hover::before {
+    .slider-menu__item:hover::before {
       width: 0;
     }
-    .item-active {
+    .slider-menu__item_active {
       border-bottom: 4px solid $red100;
     }
   }
-  .price-list {
+  .pricing__price-list {
     display: flex;
     padding-left: 4%;
     padding-right: 4%;
     justify-content: space-between;
-    .price-card {
+    .price-list__card {
       margin-right: 9%;
       background: #ffffff;
       border: 1.5px solid #c4c4c4;
@@ -78,16 +83,17 @@
         margin-right: 0;
       }
     }
-    .card-title {
+    .price-list__card-title {
       font-weight: 600;
       font-size: 28px;
       line-height: 25px;
       margin-bottom: 11px;
     }
-    .secondary {
+    .price-list__card-subtitle {
+      @extend .secondary;
       margin-bottom: 28px;
     }
-    .small-subtitle {
+    .price-list__card-small-subtitle {
       margin: 11px 0 35px 0;
     }
     .main-btn {
@@ -98,7 +104,7 @@
         border: $red100 2px solid;
       }
     }
-    .features-list {
+    .price-list__card-features-list {
       display: flex;
       flex-direction: column;
       list-style: none;

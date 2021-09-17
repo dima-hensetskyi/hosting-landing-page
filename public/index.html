@@ -16,7 +16,11 @@
   <body>
     <header class="section header">
       <div class="inner-wrapper">
-        <img src="./img/header-logo.png" alt="Lemon Wares logo" class="logo" />
+        <img
+          src="./img/header-logo.png"
+          alt="Lemon Wares logo"
+          class="header__logo"
+        />
         <nav class="menu">
           <a href="#" class="menu-item menu-item-active">Our Services</a>
           <span>
@@ -51,8 +55,8 @@
     </header>
     <section class="section">
       <div class="inner-wrapper main-screen">
-        <div class="block content-block">
-          <div class="slider-menu">
+        <div class="main-screen__content-block">
+          <div class="main-screen__slider-menu">
             <span>
               <a href="#" class="item menu-item-active">Hosting</a>
               <a href="#" class="item">Domain</a>
@@ -68,10 +72,10 @@
           <button class="main-btn">Create an Account</button>
           <button class="main-btn">Choose your plan</button>
         </div>
-        <div class="block image-block">
+        <div class="main-screen__image-block">
           <img
             src="./img/promo-photo.jpg"
-            class="promo-photo"
+            class="main-screen__promo-photo"
             alt="Promo photo"
           />
         </div>
@@ -79,7 +83,7 @@
     </section>
     <section class="section">
       <div class="inner-wrapper server-tools">
-        <div class="block content-block">
+        <div class="server-tools__content-block">
           <h2 class="h2">True Cloud Web Hosting</h2>
           <p class="regular-inter">
             True Cloud Web Hosting All of the hosting packages we offer are
@@ -88,34 +92,38 @@
             infrastructure is built to be reliable, secure, and scalable.
           </p>
         </div>
-        <div class="block gallery-block">
-          <div class="row">
-            <img src="./img/cpanel.svg" class="gallery-img" alt="cPanel" />
+        <div class="server-tools__gallery-block gallery-block">
+          <div class="gallery-block__row">
+            <img
+              src="./img/cpanel.svg"
+              class="server-tools__gallery-img"
+              alt="cPanel"
+            />
             <img
               src="./img/secured-imunify.svg"
-              class="gallery-img"
+              class="server-tools__gallery-img"
               alt="Imunify 360"
             />
             <img
               src="./img/litespeed.svg"
-              class="gallery-img"
+              class="server-tools__gallery-img"
               alt="Litespeed"
             />
           </div>
-          <div class="row">
+          <div class="gallery-block__row">
             <img
               src="./img/softaculous.svg"
-              class="gallery-img"
+              class="server-tools__gallery-img"
               alt="Softaculous"
             />
             <img
               src="./img/wordpress.svg"
-              class="gallery-img"
+              class="server-tools__gallery-img"
               alt="Wordpress"
             />
             <img
               src="./img/cloudflare.svg"
-              class="gallery-img"
+              class="server-tools__gallery-img"
               alt="Cloudflare"
             />
           </div>
@@ -124,8 +132,8 @@
     </section>
     <section class="section">
       <div class="inner-wrapper features">
-        <ul class="features-list">
-          <li class="features-item">
+        <ul class="features__list list">
+          <li class="list__item">
             <img src="./img/uptime.svg" class="features-icon" alt="Uptime" />
             <h4 class="h4">99.9% Uptime</h4>
             <p class="secondary">
@@ -134,8 +142,8 @@
               engine rankings.
             </p>
           </li>
-          <li class="features-item">
-            <div class="step-circle">
+          <li class="list__item">
+            <div class="icon-circle">
               <svg
                 width="101"
                 height="100"
@@ -169,7 +177,7 @@
               engine rankings.
             </p>
           </li>
-          <li class="features-item">
+          <li class="list__item">
             <img
               src="./img/certificates.svg"
               class="features-icon"
@@ -182,8 +190,8 @@
               engine rankings.
             </p>
           </li>
-          <li class="features-item">
-            <div class="step-circle">
+          <li class="list__item">
+            <div class="icon-circle">
               <svg
                 width="100"
                 height="100"
@@ -232,31 +240,33 @@
         </ul>
       </div>
     </section>
-    <section class="section pricing">
-      <div class="inner-wrapper">
-        <h1 class="h1">Ready to get started with Lemon Wares?</h1>
-        <p class="subtitle">Choose the package that suits you</p>
-        <div class="package">
-          <p class="subtitle">Monthly</p>
+    <section class="section">
+      <div class="inner-wrapper pricing">
+        <h1 class="pricing__title">Ready to get started with Lemon Wares?</h1>
+        <p class="pricing__subtitle">Choose the package that suits you</p>
+        <div class="pricing__package package">
+          <p class="package__subtitle">Monthly</p>
           <input type="checkbox" id="switch" />
           <label for="switch">Toggle</label>
-          <p class="subtitle">Yearly</p>
+          <p class="package__subtitle">Yearly</p>
         </div>
-        <div class="slider-menu">
-          <a href="#" class="item item-active">Basic</a>
-          <a href="#" class="item">Premium</a>
+        <div class="package__slider-menu slider-menu">
+          <a href="#" class="slider-menu__item slider-menu-item_active"
+            >Basic</a
+          >
+          <a href="#" class="slider-menu__item">Premium</a>
         </div>
-        <div class="price-list">
-          <div class="price-card">
-            <h5 class="card-title">Starter</h5>
-            <p class="secondary">
+        <div class="pricing__price-list price-list">
+          <div class="price-list__card">
+            <h5 class="price-list__card-title">Starter</h5>
+            <p class="price-list__card-subtitle">
               with all your customers via all conversation channels in one
               central dashboard.
             </p>
             <h3 class="h3">$2.80</h3>
-            <p class="small-subtitle">Per month</p>
+            <p class="price-list__card-small-subtitle">Per month</p>
             <div class="main-btn">Choose this Plan</div>
-            <ul class="features-list">
+            <ul class="price-list__card-features-list">
               <li>2GB SSD</li>
               <li>10GB Bandwidth</li>
               <li>15 Email Accounts</li>
@@ -268,16 +278,16 @@
               <li>Softaculous</li>
             </ul>
           </div>
-          <div class="price-card">
-            <h5 class="card-title">Standard</h5>
-            <p class="secondary">
+          <div class="price-list__card">
+            <h5 class="price-list__card-title">Standard</h5>
+            <p class="price-list__card-subtitle">
               with all your customers via all conversation channels in one
               central dashboard.
             </p>
             <h3 class="h3">$4.20</h3>
-            <p class="small-subtitle">Per month</p>
+            <p class="price-list__card-small-subtitle">Per month</p>
             <div class="main-btn">Choose this Plan</div>
-            <ul class="features-list">
+            <ul class="price-list__card-features-list">
               <li>2GB SSD</li>
               <li>10GB Bandwidth</li>
               <li>15 Email Accounts</li>
@@ -289,16 +299,16 @@
               <li>Softaculous</li>
             </ul>
           </div>
-          <div class="price-card">
-            <h5 class="card-title">Suprem</h5>
-            <p class="secondary">
+          <div class="price-list__card">
+            <h5 class="price-list__card-title">Suprem</h5>
+            <p class="price-list__card-subtitle">
               with all your customers via all conversation channels in one
               central dashboard.
             </p>
             <h3 class="h3">$7.00</h3>
-            <p class="small-subtitle">Per month</p>
+            <p class="price-list__card-small-subtitle">Per month</p>
             <div class="main-btn">Choose this Plan</div>
-            <ul class="features-list">
+            <ul class="price-list__card-features-list">
               <li>2GB SSD</li>
               <li>10GB Bandwidth</li>
               <li>15 Email Accounts</li>

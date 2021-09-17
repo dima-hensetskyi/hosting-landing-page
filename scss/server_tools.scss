@@ -1,21 +1,24 @@
+@import "mixins";
 .server-tools {
   display: flex;
   .block {
     flex: 1;
   }
-  .gallery-block {
+  .server-tools__gallery-block {
+    @extend .block;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    .gallery-img {
+    .server-tools__gallery-img {
       width: 120px;
       height: 120px;
     }
   }
-  .content-block {
+  .server-tools__content-block {
+    @extend .block;
     margin-right: 50px;
   }
-  .row {
+  .gallery-block__row {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -38,9 +41,9 @@
   }
 }
 
-.features-list {
+.features__list {
   display: flex;
-  .features-item {
+  .list__item {
     text-align: center;
     .secondary {
       color: $black100;
@@ -51,5 +54,8 @@
       margin-top: 12px;
       margin-bottom: 4px;
     }
+  }
+  .icon-circle {
+    @include feature-icon($red100);
   }
 }
