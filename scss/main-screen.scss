@@ -1,19 +1,4 @@
 @import "mixins";
-.header {
-  padding-top: 40px;
-  .inner-wrapper {
-    display: flex;
-    align-items: center;
-  }
-}
-.app-icon {
-  vertical-align: middle;
-}
-.header__logo {
-  width: 90.81px;
-  height: 60px;
-  margin-right: 65px;
-}
 .menu {
   display: flex;
   justify-content: space-between;
@@ -30,11 +15,9 @@
     }
   }
 }
-.menu-item {
+.menu__item {
   @extend .link;
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 22.5px;
+  @include font(15px, 600, 22.5px);
   padding-bottom: 4px;
   margin-right: 34px;
   position: relative;
@@ -42,7 +25,7 @@
     opacity: 0.8;
   }
 }
-.menu-item:hover::before {
+.menu__item:hover::before {
   content: "";
   position: absolute;
   bottom: -1px;
@@ -50,20 +33,52 @@
   width: 80%;
   margin: 0 10%;
 }
+.menu__item--active {
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    border-bottom: 2px solid $red100;
+    width: 80%;
+    margin: 0 10%;
+  }
+}
+
+.header {
+  padding-top: 40px;
+  .inner-wrapper {
+    display: flex;
+    align-items: center;
+    .header__menu {
+      @extend .menu;
+    }
+    .header__logo {
+      width: 90.81px;
+      height: 60px;
+      margin-right: 65px;
+    }
+  }
+}
+.app-icon {
+  vertical-align: middle;
+}
+
 .main-screen {
   display: flex;
   .main-screen__content-block {
     width: 58%;
     position: relative;
     @include triangle(before, 20px, $red100, bottom, 161px, right, -15px, left);
-    .h1 {
+    .main-screen__title {
+      @extend .h1;
       margin-bottom: 34px;
     }
-    p {
+    .main-screen__subtitle {
+      @extend .second-subtitle;
       margin-bottom: 60px;
     }
-    .h1,
-    .second-subtitle {
+    .main-screen__title,
+    .main-screen__subtitle {
       padding-right: 25%;
     }
     .main-screen__slider-menu {
@@ -73,13 +88,16 @@
         border-bottom: 2px $white5 solid;
       }
       .item {
-        @extend .menu-item;
+        @extend .menu__item;
         margin-right: 23px;
         padding-bottom: 4px;
         color: $grey10;
         &:hover {
           color: $red100;
         }
+      }
+      .menu__item--active {
+        color: $red100 !important;
       }
     }
     .main-btn:first-of-type {

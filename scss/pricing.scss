@@ -1,10 +1,7 @@
 .pricing {
   text-align: center;
   .pricing__title {
-    @extend .h1;
-    font-size: 50px;
-    font-weight: 600;
-    line-height: 60px;
+    @include font(50px, 600, 60px);
     color: #000000;
     margin-bottom: 38px;
     margin: 0 20% 38px 20%;
@@ -35,11 +32,7 @@
         background: $yellow;
         padding: 7px 8px;
         right: -100px;
-        font: {
-          size: 10px;
-          weight: 500;
-        }
-        line-height: 9px;
+        @include font(10px, 500, 9px);
       }
     }
   }
@@ -48,10 +41,8 @@
     margin: 0 10% 85px 10%;
     .slider-menu__item {
       flex: 1;
-      @extend .menu-item;
-      font-size: 30px;
-      font-weight: 600;
-      line-height: 40px;
+      @extend .menu__item;
+      @include font(30px, 600, 40px);
       margin-right: 0;
       border-bottom: 4px solid $grey5;
       &:hover {
@@ -61,7 +52,7 @@
     .slider-menu__item:hover::before {
       width: 0;
     }
-    .slider-menu__item_active {
+    .slider-menu__item--active {
       border-bottom: 4px solid $red100;
     }
   }
@@ -84,10 +75,11 @@
       }
     }
     .price-list__card-title {
-      font-weight: 600;
-      font-size: 28px;
-      line-height: 25px;
+      @include font(28px, 600, 25px);
       margin-bottom: 11px;
+    }
+    .price-list__card-price {
+      @extend .h3;
     }
     .price-list__card-subtitle {
       @extend .secondary;
@@ -117,12 +109,7 @@
         &:last-of-type {
           margin-bottom: 0;
         }
-        &::before {
-          content: url("../img/checkmark.svg");
-          vertical-align: middle;
-          margin-right: 24px;
-          color: $black100;
-        }
+        @include check-mark(before, $black100);
       }
     }
   }

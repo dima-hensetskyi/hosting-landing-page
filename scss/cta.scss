@@ -6,10 +6,9 @@
   padding-top: 80px;
   padding-bottom: 80px;
   text-align: center;
-  .h1 {
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-bottom: 40px;
+  .cta__title {
+    @extend .h1;
+    margin: 0 10% 40px 10%;
     font-weight: 600;
     position: relative;
     @include triangle(before, 20px, $red100, top, -80px, left, 30%, right);

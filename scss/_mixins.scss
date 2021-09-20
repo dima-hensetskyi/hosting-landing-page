@@ -92,3 +92,36 @@
     }
   }
 }
+
+@mixin check-mark($before-or-after, $color) {
+  &::#{$before-or-after} {
+    content: url("../img/checkmark.svg");
+    vertical-align: middle;
+    margin-right: 24px;
+    color: $color;
+  }
+}
+
+@mixin quotes(
+  $before-or-after,
+  $left-or-right,
+  $left-or-right-value,
+  $top-or-bottom,
+  $top-or-bottom-value,
+  $color,
+  $size,
+  $z-index: false
+) {
+  &:#{$before-or-after} {
+    position: absolute;
+    content: "“";
+    font-family: "Work Sans", sans-serif;
+    #{$left-or-right}: $left-or-right-value;
+    #{$top-or-bottom}: $top-or-bottom-value;
+    color: $color;
+    font-size: $size;
+    @if ($z-index) {
+      z-index: $z-index;
+    }
+  }
+}

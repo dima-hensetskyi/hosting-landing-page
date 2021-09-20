@@ -1,22 +1,29 @@
 .reviews {
-  .wrapper {
+  .reviews__wrapper {
     display: flex;
     margin: 0 115px;
-    .h2 {
+    .reviews-block__title {
+      @extend .h2;
       margin-bottom: 8px;
       position: relative;
-      &::after {
-        z-index: -1;
-        content: url("../img/big-quotes.svg");
-        position: absolute;
-        left: -15%;
-        top: -40%;
-      }
+      @include quotes(
+        after,
+        left,
+        -25%,
+        top,
+        40%,
+        rgba(176, 0, 0, 0.322),
+        8em,
+        -1
+      );
     }
-    .block {
+    .reviews-block__content {
+      @extend .regular-inter;
+    }
+    .reviews__wrapper-block {
       flex: 1;
     }
-    .card {
+    .reviews-block__card {
       margin: 15px;
       padding: 35px 30px 14px 64px;
       background-color: $white;
@@ -25,45 +32,37 @@
       img {
         margin-bottom: -15px;
       }
-      .card-body {
+      .reviews-block__card-content {
+        @extend .regular-inter;
         margin-bottom: 24px;
         font-size: 16px;
         position: relative;
-
-        &:after {
-          position: absolute;
-          content: url("../img/quotes.svg");
-          left: -26px;
-          top: -10px;
-        }
+        @include quotes(after, left, -26px, top, -10px, $turquoise, 3em);
       }
-      .card-footer {
-        .regular-inter {
-          font: {
-            size: 18px;
-            weight: 800;
-          }
-          line-height: 28px;
+      .reviews-block__card-footer {
+        .card-footer__author {
+          @include font(18px, 800, 28px, $secondary-font);
           color: $black70;
         }
-        .small-subtitle {
+        .card-footer__subtitle {
+          @extend .small-subtitle;
           line-height: 24px;
           color: $grey30;
         }
       }
     }
-    .card:nth-child(2) {
+    .reviews-block__card:nth-child(2) {
       img {
         margin-bottom: -25px;
       }
       margin-right: 20%;
       margin-top: 30px;
       padding-bottom: 32px;
-      .card-body {
+      .reviews-block__card-content {
         font-size: 18px;
       }
     }
-    .card:nth-child(3) {
+    .reviews-block__card:nth-child(3) {
       margin-left: 28%;
       padding-bottom: 90px;
     }

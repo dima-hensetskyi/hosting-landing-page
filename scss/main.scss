@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap");
 @import "mixins";
 
 /* Colors */
@@ -16,6 +17,7 @@ $grey30: #969bab;
 $red100: #b00000;
 $purple: #f7fafe;
 $yellow: #ffe87a;
+$turquoise: #2ec5ce;
 /*  */
 
 /* Font */
@@ -70,15 +72,11 @@ body {
 /*  */
 
 .main-btn {
-  font: {
-    size: 14px;
-    family: $primary-font;
-  }
+  @include font(14px, normal, 24px, $primary-font);
   cursor: pointer;
   transition: 0.3s;
   text-align: center;
   color: $black100;
-  line-height: 24px;
   padding: 12px 13.5px;
   border: 1px solid #000000;
   box-sizing: border-box;
@@ -93,6 +91,13 @@ body {
   &:active {
     box-shadow: 0px 0px 64px rgba(176, 0, 0, 0.3);
   }
+}
+.main-btn--active {
+  color: $white;
+  background: $red100;
+  border: $red100 1px solid;
+  border-radius: 8px;
+  box-shadow: 0px 0px 64px rgba(176, 0, 0, 0.3);
 }
 .secondary-btn {
   @extend .main-btn;

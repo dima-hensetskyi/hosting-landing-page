@@ -21,15 +21,17 @@
           alt="Lemon Wares logo"
           class="header__logo"
         />
-        <nav class="menu">
-          <a href="#" class="menu-item menu-item-active">Our Services</a>
+        <nav class="header__menu">
           <span>
-            <a href="#" class="menu-item">About</a>
-            <a href="#" class="menu-item">Blog&News</a>
-            <a href="#" class="menu-item">Contact</a>
+            <a href="#" class="menu__item menu__item--active">Our Services</a>
           </span>
           <span>
-            <a href="#" class="menu-item">Account</a>
+            <a href="#" class="menu__item">About</a>
+            <a href="#" class="menu__item">Blog&News</a>
+            <a href="#" class="menu__item">Contact</a>
+          </span>
+          <span>
+            <a href="#" class="menu__item">Account</a>
             <span>
               <svg
                 class="app-icon"
@@ -47,7 +49,7 @@
                   stroke-linejoin="round"
                 />
               </svg>
-              <a href="tel:88005553535" class="menu-item"> +2349067322844 </a>
+              <a href="tel:88005553535" class="menu__item"> +2349067322844 </a>
             </span>
           </span>
         </nav>
@@ -58,18 +60,20 @@
         <div class="main-screen__content-block">
           <div class="main-screen__slider-menu">
             <span>
-              <a href="#" class="item menu-item-active">Hosting</a>
+              <a href="#" class="item menu__item--active">Hosting</a>
               <a href="#" class="item">Domain</a>
               <a href="#" class="item">Seo</a>
               <a href="#" style="margin-right: 0" class="item">Email</a>
             </span>
           </div>
-          <h1 class="h1">Premium Web Hosting for Your Website</h1>
-          <p class="second-subtitle">
+          <h1 class="main-screen__title">
+            Premium Web Hosting for Your Website
+          </h1>
+          <p class="main-screen__subtitle">
             Blazing fast web hosting for individuals and <br />
             businesses of all sizes backed by 24x7x365 Support.
           </p>
-          <button class="main-btn">Create an Account</button>
+          <button class="main-btn main-btn--active">Create an Account</button>
           <button class="main-btn">Choose your plan</button>
         </div>
         <div class="main-screen__image-block">
@@ -84,8 +88,10 @@
     <section class="section">
       <div class="inner-wrapper server-tools">
         <div class="server-tools__content-block">
-          <h2 class="h2">True Cloud Web Hosting</h2>
-          <p class="regular-inter">
+          <h2 class="server-tools__content-block-title">
+            True Cloud Web Hosting
+          </h2>
+          <p class="server-tools__content-block-content">
             True Cloud Web Hosting All of the hosting packages we offer are
             deployed instantly on our SSD powered cloud. We don’t use dedicated
             servers that operate on single pieces of hardware. Our entire
@@ -135,8 +141,8 @@
         <ul class="features__list list">
           <li class="list__item">
             <img src="./img/uptime.svg" class="features-icon" alt="Uptime" />
-            <h4 class="h4">99.9% Uptime</h4>
-            <p class="secondary">
+            <h4 class="list__item-title">99.9% Uptime</h4>
+            <p class="list__item-content">
               We Keep Your Web build Online 24x7x365. Downtime not only costs
               you lost visitors but also damages your reputation and search
               engine rankings.
@@ -170,8 +176,8 @@
               </svg>
             </div>
 
-            <h4 class="h4">Blazing Fast Web Hosting</h4>
-            <p class="secondary">
+            <h4 class="list__item-title">Blazing Fast Web Hosting</h4>
+            <p class="list__item-content">
               We Keep Your Web build Online 24x7x365. Downtime not only costs
               you lost visitors but also damages your reputation and search
               engine rankings.
@@ -183,8 +189,8 @@
               class="features-icon"
               alt="Certificates"
             />
-            <h4 class="h4">Free SSL Certificates</h4>
-            <p class="secondary">
+            <h4 class="list__item-title">Free SSL Certificates</h4>
+            <p class="list__item-content">
               We Keep Your Web build Online 24x7x365. Downtime not only costs
               you lost visitors but also damages your reputation and search
               engine rankings.
@@ -230,8 +236,8 @@
               </svg>
             </div>
 
-            <h4 class="h4">24x7 Friendly Support</h4>
-            <p class="secondary">
+            <h4 class="list__item-title">24x7 Friendly Support</h4>
+            <p class="list__item-content">
               We Keep Your Web build Online 24x7x365. Downtime not only costs
               you lost visitors but also damages your reputation and search
               engine rankings.
@@ -251,7 +257,7 @@
           <p class="package__subtitle">Yearly</p>
         </div>
         <div class="package__slider-menu slider-menu">
-          <a href="#" class="slider-menu__item slider-menu-item_active"
+          <a href="#" class="slider-menu__item slider-menu__item--active"
             >Basic</a
           >
           <a href="#" class="slider-menu__item">Premium</a>
@@ -263,7 +269,7 @@
               with all your customers via all conversation channels in one
               central dashboard.
             </p>
-            <h3 class="h3">$2.80</h3>
+            <h3 class="price-list__card-price">$2.80</h3>
             <p class="price-list__card-small-subtitle">Per month</p>
             <div class="main-btn">Choose this Plan</div>
             <ul class="price-list__card-features-list">
@@ -284,7 +290,7 @@
               with all your customers via all conversation channels in one
               central dashboard.
             </p>
-            <h3 class="h3">$4.20</h3>
+            <h3 class="price-list__card-price">$4.20</h3>
             <p class="price-list__card-small-subtitle">Per month</p>
             <div class="main-btn">Choose this Plan</div>
             <ul class="price-list__card-features-list">
@@ -305,7 +311,7 @@
               with all your customers via all conversation channels in one
               central dashboard.
             </p>
-            <h3 class="h3">$7.00</h3>
+            <h3 class="price-list__card-price">$7.00</h3>
             <p class="price-list__card-small-subtitle">Per month</p>
             <div class="main-btn">Choose this Plan</div>
             <ul class="price-list__card-features-list">
@@ -323,58 +329,62 @@
         </div>
       </div>
     </section>
-    <section class="section reviews">
-      <div class="inner-wrapper">
-        <div class="wrapper">
-          <div class="block">
-            <h2 class="h2">Real Stories from Real Customers</h2>
-            <p class="regular-inter">Get inspired by these stories.</p>
-            <div class="card">
+    <section class="section">
+      <div class="inner-wrapper reviews">
+        <div class="reviews__wrapper">
+          <div class="reviews__wrapper-block reviews-block">
+            <h2 class="reviews-block__title">
+              Real Stories from Real Customers
+            </h2>
+            <p class="reviews-block__content">Get inspired by these stories.</p>
+            <div class="reviews-block__card">
               <img
                 src="./img/crypto-learn.svg"
                 class="gallery-img"
                 alt="Crypto learn Invest"
               />
-              <p class="regular-inter card-body">
+              <p class="reviews-block__card-content">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
                 aliquam, purus sit amet luctus venenatis, lectus magna fringilla
                 urna, porttitor rhoncus dolor purus non enim praesent elem
               </p>
-              <div class="card-footer">
-                <p class="regular-inter">Floyd Miles</p>
-                <div class="small-subtitle">Vice President, CLI</div>
+              <div class="reviews-block__card-footer card-footer">
+                <p class="card-footer__author">Floyd Miles</p>
+                <div class="card-footer__subtitle">Vice President, CLI</div>
               </div>
             </div>
           </div>
-          <div class="block">
-            <div class="card">
+          <div class="reviews__wrapper-block">
+            <div class="reviews-block__card">
               <img
                 src="./img/jerry-piping.svg"
                 class="gallery-img"
                 alt="Crypto learn Invest"
               />
-              <p class="regular-inter card-body">
+              <p class="reviews-block__card-content">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
                 aliquam, purus sit amet luctus venenatis, lectus magna fringilla
                 urna, porttitor rhoncus dolor purus non enim praesent elem
               </p>
-              <div class="card-footer">
-                <p class="regular-inter">Jane Cooper</p>
-                <div class="small-subtitle">CEO, JPNL</div>
+              <div class="reviews-block__card-footer card-footer">
+                <p class="card-footer__author">Jane Cooper</p>
+                <div class="card-footer__subtitle">CEO, JPNL</div>
               </div>
             </div>
-            <div class="card">
+            <div class="reviews-block__card">
               <img
                 src="./img/leeveon-branding.svg"
                 class="gallery-img"
                 alt="Crypto learn Invest"
               />
-              <p class="regular-inter card-body">
+              <p class="reviews-block__card-content">
                 LemonWares saved our time in Hosting my company page.
               </p>
-              <div class="card-footer">
-                <p class="regular-inter">Kristin Watson</p>
-                <div class="small-subtitle">Co-Founder, LeeveOn Branding</div>
+              <div class="reviews-block__card-footer card-footer">
+                <p class="card-footer__author">Kristin Watson</p>
+                <div class="card-footer__subtitle">
+                  Co-Founder, LeeveOn Branding
+                </div>
               </div>
             </div>
           </div>
@@ -383,15 +393,17 @@
     </section>
     <section class="section">
       <div class="inner-wrapper server-tools">
-        <div class="block content-block consumers">
-          <h2 class="h2">We serve over 100 Nigerian Websites</h2>
-          <p class="regular-inter">
+        <div class="server-tools__content-block consumers">
+          <h2 class="server-tools__content-block-title">
+            We serve over 100 Nigerian Websites
+          </h2>
+          <p class="server-tools__content-block-content">
             Connect LemonWares with your favourite tools that you use daily and
             keep things on track.
           </p>
         </div>
-        <div class="gallery-block block">
-          <div class="row">
+        <div class="server-tools__gallery-block">
+          <div class="gallery-block__row">
             <img src="./img/jerry-piping.svg" class="gallery-img" alt="JPNL" />
             <img
               src="./img/korane-scents.svg"
@@ -404,7 +416,7 @@
               alt="Nadine ghaida"
             />
           </div>
-          <div class="row">
+          <div class="gallery-block__row">
             <img
               src="./img/leeveon-branding.svg"
               class="gallery-img"
@@ -426,7 +438,7 @@
     </section>
     <section class="section">
       <div class="inner-wrapper cta">
-        <h1 class="h1">We're here to make your website awesome.</h1>
+        <h1 class="cta__title">We're here to make your website awesome.</h1>
         <button class="secondary-btn">
           <img
             src="./img/feedback-icon.svg"
@@ -438,48 +450,48 @@
     </section>
     <footer class="footer section">
       <div class="inner-wrapper">
-        <div class="row">
-          <div class="col">
+        <div class="footer__row">
+          <div class="footer__col">
             <img
               src="./img/footer-logo.png"
               alt="Lemon Wares"
               class="footer-logo"
             />
-            <p class="regular-inter">
+            <p class="footer__col-content">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
               aliquam, purus sit amet luctus venenatis, lectus magna fringilla
               urna, porttitor rhoncus dolor purus non enim praesent elem
             </p>
           </div>
-          <div class="col">
-            <h6 class="h6">Service</h6>
-            <p class="footer-links">
+          <div class="footer__col">
+            <h6 class="footer__col-title">Service</h6>
+            <p class="footer__col-links">
               <a href="#" class="footer-link">Domain</a>
               <a href="#" class="footer-link">Shared Hosting</a>
               <a href="#" class="footer-link">Cloud Hosting</a>
               <a href="#" class="footer-link">Private Hosting</a>
             </p>
           </div>
-          <div class="col">
-            <h6 class="h6">Hosting</h6>
-            <p class="footer-links">
+          <div class="footer__col">
+            <h6 class="footer__col-title">Hosting</h6>
+            <p class="footer__col-links">
               <a href="#" class="footer-link">Cheap Hosting</a>
               <a href="#" class="footer-link">Hosting Wordpress</a>
               <a href="#" class="footer-link">Email Hosting</a>
               <a href="#" class="footer-link">Hosting Unlimited</a>
             </p>
           </div>
-          <div class="col">
-            <h6 class="h6">Company</h6>
-            <p class="footer-links">
+          <div class="footer__col">
+            <h6 class="footer__col-title">Company</h6>
+            <p class="footer__col-links">
               <a href="#" class="footer-link">About</a>
               <a href="#" class="footer-link">Career</a>
               <a href="#" class="footer-link">Contact Us</a>
             </p>
           </div>
-          <div class="col">
-            <h6 class="h6">Help</h6>
-            <p class="footer-links">
+          <div class="footer__col">
+            <h6 class="footer__col-title">Help</h6>
+            <p class="footer__col-links">
               <a href="#" class="footer-link">FAQ</a>
               <a href="#" class="footer-link">Help support</a>
             </p>
